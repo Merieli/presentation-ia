@@ -25,7 +25,7 @@ mdc: true
 #  ogImage: https://cover.sli.dev
 ---
 
-# Welcome to Slidev
+# IA primeiros passos no desenvolvimento
 
 Presentation slides for developers
 
