@@ -5,12 +5,13 @@ theme: geist
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Palestra IA
+titleTemplate: '%s - Merieli'
+author: Meriéli Manzano
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## IA sem Frustração
+  
+  Uma apresentação sobre IA produtiva no trabalho de desenvolvedor.
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -23,15 +24,13 @@ mdc: true
 # open graph
 # seoMeta:
 #  ogImage: https://cover.sli.dev
+
+presenter: false
 ---
 
-# IA primeiros passos no desenvolvimento
+# IA sem Frustração
 
-Presentation slides for developers
-
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
-</div>
+Estratégias para desenvolvedores multiplicarem resultados
 
 <div class="abs-br m-6 text-xl">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
@@ -45,26 +44,34 @@ Presentation slides for developers
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+---
+layout: image-left
+image: /images/robo-paradoxo.jpeg
+backgroundSize: contain
+---
+
+# <p style="padding-left: 50px">O Paradoxo</p>
+
+<ul style="padding-left: 50px">
+  <li>Promessa: produtividade, automação, menos retrabalho.</li>
+  <li>Realidade: frustração, dependência, erros sutis.</li>
+</ul>
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# Falhas da IA: o lado que ninguém pode ignorar
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+- 🤹 **Alucinações** - respostas inventadas, mas com “tom de verdade”.
+* **Dependência perigosa:** aceitar código/soluções sem validação.
+* 📝 **Falta de contexto:** respostas boas em teoria, ruins na prática.
+* 🛠 **Produtividade ilusória:** gastar mais tempo revisando do que criando.
+  
+* Exemplo prático: mostrar um bug que a IA “explica” de forma convincente, mas totalmente errada.
+  👉 Mensagem: *“Não podemos confiar 100%. O segredo está em como guiamos e validamos a IA.”*
 <br>
 <br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
