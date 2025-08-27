@@ -36,7 +36,7 @@ Estratégias para desenvolvedores multiplicarem resultados
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/Merieli" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
@@ -50,12 +50,19 @@ image: /images/robo-paradoxo.jpeg
 backgroundSize: contain
 ---
 
-# <p style="padding-left: 50px">O Paradoxo</p>
+<Title>O Paradoxo</Title>
 
-<ul style="padding-left: 50px">
-  <li>Promessa: produtividade, automação, menos retrabalho.</li>
-  <li>Realidade: frustração, dependência, erros sutis.</li>
-</ul>
+<List :items="[
+    {
+      label: 'Promessa',
+      text: 'produtividade, automação, menos retrabalho.'
+    },
+    {
+      label: 'Realidade',
+      text: 'frustração, dependência, erros sutis.'
+    }
+  ]" 
+/>
 
 ---
 transition: fade-out
@@ -64,9 +71,9 @@ transition: fade-out
 # Falhas da IA: o lado que ninguém pode ignorar
 
 - 🤹 **Alucinações** - respostas inventadas, mas com “tom de verdade”.
-* **Dependência perigosa:** aceitar código/soluções sem validação.
-* 📝 **Falta de contexto:** respostas boas em teoria, ruins na prática.
-* 🛠 **Produtividade ilusória:** gastar mais tempo revisando do que criando.
+- 💀 **Dependência perigosa:** aceitar código/soluções sem validação.
+- 📝 **Falta de contexto:** respostas boas em teoria, ruins na prática.
+- 🛠 **Produtividade ilusória:** gastar mais tempo revisando do que criando.
   
 * Exemplo prático: mostrar um bug que a IA “explica” de forma convincente, mas totalmente errada.
   👉 Mensagem: *“Não podemos confiar 100%. O segredo está em como guiamos e validamos a IA.”*
@@ -77,6 +84,41 @@ transition: fade-out
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/features/slide-scope-style
 -->
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+---
+transition: fade-out
+---
+
+# Armadilha dos LLMs
+
+As vezes a IA não traz verdades absolutas, e simula que tem uma resposta ao obter um conteúdo que ele já conhece, mas que não necessariamente é do link que você pediu.
+
+- Citação inadequada de fontes
+- Geram fontes que parecem ser confiáveis mas são inventadas.
+- Viés: gerando frequentemente conteúdo estereotipado ou preconceituoso.
+- Alucinações: produzem uma resposta que parece confiante mas é incorreta.
+- Erros de matemática: têm dificuldades com tarefas matemáticas e podem fornecer respostas incorretas.
+- Manipulação do comando inicial: podem ser manipulados ou "hackeados" para gerar conteúdo específico.
+- Mesmo repetindo o que ele precisa fazer, corre o risco dele são seguir o que foi pedido
+
+> NUNCA CONFIE 100%, SEMPRE VALIDE SE ESTÁ CERTO!
+> 
+> Sempre seja crítico, a IA pode alucinar, a tendência dela é responder o que você quer, mesmo que o que você queira esteja errado. Então sempre valide o que ela te entregar.
+
+
+<br>
+<br>
 
 <style>
 h1 {
