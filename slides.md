@@ -1,6 +1,6 @@
 ---
 # You can also start simply with 'default'
-theme: geist
+theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
@@ -10,11 +10,15 @@ titleTemplate: '%s - Merieli'
 author: Meriéli Manzano
 info: |
   ## IA sem Frustração
-  
+
   Uma apresentação sobre IA produtiva no trabalho de desenvolvedor.
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
+# fonts:
+#   sans: Roboto
+#   serif: Roboto Slab
+#   mono: Fira Code
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
@@ -44,13 +48,14 @@ Estratégias para desenvolvedores multiplicarem resultados
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+
 ---
 layout: image-left
 image: /images/robo-paradoxo.jpeg
 backgroundSize: contain
 ---
 
-<Title>O Paradoxo</Title>
+# O Paradoxo
 
 <List :items="[
     {
@@ -104,15 +109,31 @@ transition: fade-out
 
 As vezes a IA não traz verdades absolutas, e simula que tem uma resposta ao obter um conteúdo que ele já conhece, mas que não necessariamente é do link que você pediu.
 
-- Citação inadequada de fontes
-- Geram fontes que parecem ser confiáveis mas são inventadas.
-- Viés: gerando frequentemente conteúdo estereotipado ou preconceituoso.
-- Alucinações: produzem uma resposta que parece confiante mas é incorreta.
+<List :items="[
+    {
+      label: 'Citação inadequada de fontes',
+      text: 'parecem ser confiáveis mas são inventadas'
+    },
+    {
+      label: 'Viés',
+      text: 'conteúdo estereotipado ou preconceituoso'
+    },
+    {
+      label: 'Alucinações',
+      text: 'respostas que parecem confiáveis, mas são incorretas'
+    },
+    {
+      label: 'Prompt Hacking',
+      text: 'podem ser manipulados para gerar conteúdo específico.'
+    }
+  ]" 
+/>
+
 - Erros de matemática: têm dificuldades com tarefas matemáticas e podem fornecer respostas incorretas.
-- Manipulação do comando inicial: podem ser manipulados ou "hackeados" para gerar conteúdo específico.
 - Mesmo repetindo o que ele precisa fazer, corre o risco dele são seguir o que foi pedido
 
 > NUNCA CONFIE 100%, SEMPRE VALIDE SE ESTÁ CERTO!
+
 > 
 > Sempre seja crítico, a IA pode alucinar, a tendência dela é responder o que você quer, mesmo que o que você queira esteja errado. Então sempre valide o que ela te entregar.
 

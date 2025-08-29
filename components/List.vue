@@ -13,7 +13,7 @@ interface ListProps {
 defineProps<ListProps>();
 
 const listStyle = ref({
-  'padding-left': '50px',
+  'padding-left': '20px',
   'list-style-type': 'disc'
 });
 
