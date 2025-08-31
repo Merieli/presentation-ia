@@ -52,7 +52,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 layout: image-left
 image: /images/robo-paradoxo.jpeg
-backgroundSize: contain
+backgroundSize: cover
 ---
 
 # O Paradoxo
@@ -71,6 +71,7 @@ backgroundSize: contain
 
 ---
 transition: fade-out
+class: gradient-blue
 ---
 
 # Falhas da IA: o lado que ninguém pode ignorar
@@ -84,23 +85,6 @@ transition: fade-out
   👉 Mensagem: *“Não podemos confiar 100%. O segredo está em como guiamos e validamos a IA.”*
 <br>
 <br>
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
 ---
 transition: fade-out
 ---
@@ -137,53 +121,7 @@ As vezes a IA não traz verdades absolutas, e simula que tem uma resposta ao obt
 > 
 > Sempre seja crítico, a IA pode alucinar, a tendência dela é responder o que você quer, mesmo que o que você queira esteja errado. Então sempre valide o que ela te entregar.
 
-
 <br>
-<br>
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
 ---
 layout: two-cols
 layoutClass: gap-16
