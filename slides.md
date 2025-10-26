@@ -32,9 +32,9 @@ mdc: true
 presenter: false
 ---
 
-# IA sem Frustração
+# De pedreiro a Arquiteto
 
-Estratégias para desenvolvedores multiplicarem resultados
+Repensando a Programação na Era da IA.
 
 <div class="abs-br m-6 text-xl">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
@@ -48,6 +48,44 @@ Estratégias para desenvolvedores multiplicarem resultados
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+
+---
+class: px-20
+---
+
+# Momento Copiloto
+
+A revolução da IA no desenvolvimento não é sobre *substituir* o programador. É sobre *promovê-lo*.
+
+<div grid="~ cols-2 gap-2" m="t-2">
+
+Digitar código
+
+Dirigir a criação de código
+
+</div>
+
+**Agenda da Palestra:**
+* O que é a IA Generativa (no contexto do dev).
+* A Mudança de Paradigma: O "Novo Pensamento".
+* Como Usar (O Ciclo de Vida do Dev).
+* Desafios e o Futuro.
+
+
+---
+class: px-20
+---
+
+## A Mudança de Paradigma
+
+| **Antigo Programador (O Pedreiro)**                            | **Novo Programador (O Arquiteto/Diretor)**                             |
+| :--------------------------------------------------------- | :------------------------------------------------------------------ |
+| Digitar código linha a linha.                              | Escrever prompts e *revisar* código gerado.                         |
+| Escrevo o código pra resolver o problema, depois refatorar e refinar. | Planejo como irei implementar a minha ideia, com a ajuda da IA defino a melhor arquitetura e deisgn pattern para a solução e depois peço para o modelo aplicar o plano. |
+| "Como *eu* escrevo esta lógica?"                           | "Como *eu explico* esta lógica para a IA?"                          |
+| "Onde está o *meu* erro?"                                  | "O que a IA *não entendeu* do meu pedido?"                          |
+| Eficiência na digitação, conhecimento profundo da sintaxe. | Clareza de comunicação, visão de sistema, velocidade de integração. |
+
 
 ---
 layout: image-left
@@ -309,37 +347,6 @@ Also, HTML elements are valid:
   <span>Right content</span>
 </div>
 -->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
 
 ---
 
