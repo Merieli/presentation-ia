@@ -6,7 +6,7 @@ theme: ./theme
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: Palestra IA
-titleTemplate: '%s - Merieli'
+titleTemplate: "%s - Merieli"
 author: Meriéli Manzano
 info: |
   ## IA sem Frustração
@@ -32,622 +32,362 @@ mdc: true
 presenter: false
 ---
 
-# De pedreiro a Arquiteto
+# De Pedreiro a Arquiteto
 
 Repensando a Programação na Era da IA.
 
 <div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
   <a href="https://github.com/Merieli" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-class: px-20
 ---
 
-# Momento Copiloto
+# O "Momento Copiloto"
 
-A revolução da IA no desenvolvimento não é sobre *substituir* o programador. É sobre *promovê-lo*.
+A revolução da IA no desenvolvimento não é sobre **substituir** o programador. É sobre **promovê-lo**.
 
-<div grid="~ cols-2 gap-2" m="t-2">
+Estamos saindo da era de _digitar código_ para a era de _dirigir a criação de código_.
 
-Digitar código
+<br>
 
-Dirigir a criação de código
+**Agenda:**
+
+- O que é a IA Generativa para Devs.
+- A Mudança de Paradigma: O "Novo Pensamento".
+- Como Usar: A IA no Ciclo de Vida do Dev.
+- Desafios: A IA não é mágica.
+- O Futuro: O Agente de IA.
+
+---
+
+## O Que Mudou? A IA Generativa para Devs
+
+Não é _qualquer_ IA. Falamos de **LLMs** (Large Language Models) treinados com bilhões de linhas de código.
+
+<div grid="~ cols-3 gap-4" m="t-4">
+
+<div>
+<div i-carbon-code text-4xl />
+<h4>Assistentes de Código</h4>
+<p text-sm>
+GitHub Copilot, Tabnine, Codeium. Foco em <b>autocompletar</b>.
+</p>
+</div>
+
+<div>
+<div i-carbon-chat text-4xl />
+<h4>Chatbots de Contexto</h4>
+<p text-sm>
+ChatGPT, Google Gemini, Claude, Cursor. Foco em <b>perguntar e refatorar</b>.
+</p>
+</div>
+
+<div>
+<div i-carbon-cics-program text-4xl />
+<h4>Ferramentas Especializadas</h4>
+<p text-sm>
+Testes (CodiumAI), Documentação (Mintlify), Debugging.
+</p>
+</div>
 
 </div>
 
-**Agenda da Palestra:**
-* O que é a IA Generativa (no contexto do dev).
-* A Mudança de Paradigma: O "Novo Pensamento".
-* Como Usar (O Ciclo de Vida do Dev).
-* Desafios e o Futuro.
-
-
----
-class: px-20
----
-
-## A Mudança de Paradigma
-
-| **Antigo Programador (O Pedreiro)**                            | **Novo Programador (O Arquiteto/Diretor)**                             |
-| :--------------------------------------------------------- | :------------------------------------------------------------------ |
-| Digitar código linha a linha.                              | Escrever prompts e *revisar* código gerado.                         |
-| Escrevo o código pra resolver o problema, depois refatorar e refinar. | Planejo como irei implementar a minha ideia, com a ajuda da IA defino a melhor arquitetura e deisgn pattern para a solução e depois peço para o modelo aplicar o plano. |
-| "Como *eu* escrevo esta lógica?"                           | "Como *eu explico* esta lógica para a IA?"                          |
-| "Onde está o *meu* erro?"                                  | "O que a IA *não entendeu* do meu pedido?"                          |
-| Eficiência na digitação, conhecimento profundo da sintaxe. | Clareza de comunicação, visão de sistema, velocidade de integração. |
-
-
----
-layout: image-left
-image: /images/robo-paradoxo.jpeg
-backgroundSize: cover
----
-
-# O Paradoxo
-
-<List :items="[
-    {
-      label: 'Promessa',
-      text: 'produtividade, automação, menos retrabalho.'
-    },
-    {
-      label: 'Realidade',
-      text: 'frustração, dependência, erros sutis.'
-    }
-  ]" 
-/>
-
----
-transition: fade-out
-class: gradient-blue
----
-
-# Falhas da IA: o lado que ninguém pode ignorar
-
-- 🤹 **Alucinações** - respostas inventadas, mas com “tom de verdade”.
-- 💀 **Dependência perigosa:** aceitar código/soluções sem validação.
-- 📝 **Falta de contexto:** respostas boas em teoria, ruins na prática.
-- 🛠 **Produtividade ilusória:** gastar mais tempo revisando do que criando.
-  
-* Exemplo prático: mostrar um bug que a IA “explica” de forma convincente, mas totalmente errada.
-  👉 Mensagem: *“Não podemos confiar 100%. O segredo está em como guiamos e validamos a IA.”*
 <br>
-<br>
+
+> O ponto-chave: Elas não são "autocomplete" glorificados. Elas entendem (parcialmente) a **intenção** por trás do seu código.
+
 ---
-transition: fade-out
----
 
-# Armadilha dos LLMs
+# O Núcleo: A Mudança de Paradigma
 
-As vezes a IA não traz verdades absolutas, e simula que tem uma resposta ao obter um conteúdo que ele já conhece, mas que não necessariamente é do link que você pediu.
-
-<List :items="[
-    {
-      label: 'Citação inadequada de fontes',
-      text: 'parecem ser confiáveis mas são inventadas'
-    },
-    {
-      label: 'Viés',
-      text: 'conteúdo estereotipado ou preconceituoso'
-    },
-    {
-      label: 'Alucinações',
-      text: 'respostas que parecem confiáveis, mas são incorretas'
-    },
-    {
-      label: 'Prompt Hacking',
-      text: 'podem ser manipulados para gerar conteúdo específico.'
-    }
-  ]" 
-/>
-
-- Erros de matemática: têm dificuldades com tarefas matemáticas e podem fornecer respostas incorretas.
-- Mesmo repetindo o que ele precisa fazer, corre o risco dele são seguir o que foi pedido
-
-> NUNCA CONFIE 100%, SEMPRE VALIDE SE ESTÁ CERTO!
-
-> 
-> Sempre seja crítico, a IA pode alucinar, a tendência dela é responder o que você quer, mesmo que o que você queira esteja errado. Então sempre valide o que ela te entregar.
+| Característica        | Antigo Programador (O Artesão)                             | O Novo Programador (O Arquiteto)                                    |
+| :-------------------- | :--------------------------------------------------------- | :------------------------------------------------------------------ |
+| **Foco Principal**    | Sintaxe e Algoritmos.                                      | Intenção e Especificação.                                           |
+| **Atividade Central** | Digitar código linha a linha.                              | Escrever prompts e _revisar_ código gerado.                         |
+| **A Pergunta**        | "Como _eu_ escrevo esta lógica?"                           | "Como _eu explico_ esta lógica para a IA?"                          |
+| **Depuração**         | "Onde está o _meu_ erro?"                                  | "O que a IA _não entendeu_ do meu pedido?"                          |
+| **Valor Agregado**    | Eficiência na digitação, conhecimento profundo da sintaxe. | Clareza de comunicação, visão de sistema, velocidade de integração. |
 
 <br>
+
+A nova habilidade essencial: **Engenharia de Prompt aplicada ao código.**
+
 ---
 layout: two-cols
-layoutClass: gap-16
+layoutClass: gap-20
 ---
 
-# Table of contents
+### O Pedreiro
 
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+Constrói a casa do zero. Prepara a fundação, assenta os tijolos, finaliza com o acabamento.
+<br><br>
+O valor está no **trabalho manual detalhado**. Cada linha de código é escrita e posicionada com cuidado.
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
+### O Arquiteto (com IA)
+
+Projeta a solução. Define os requisitos, a estrutura, os materiais e o estilo.
+<br><br>
+A IA (a "fábrica inteligente") gera um protótipo. O arquiteto então **ajusta, refina e valida** a qualidade final.
+
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+
+# Como Usar: IA no Ciclo de Vida do Dev
+
+A IA pode ser sua parceira em todas as fases do desenvolvimento.
+
+<div grid="~ cols-2 gap-x-8 gap-y-4" m="t-4">
+
+<div>
+<div i-carbon-flash text-3xl text-green-500 />
+<h4>1. Geração e Prototipagem</h4>
+<p text-sm>
+Crie boilerplates, scripts e componentes em segundos a partir de um comentário.
+</p>
+</div>
+
+<div>
+<div i-carbon-loop text-3xl text-blue-500 />
+<h4>2. Refatoração e Otimização</h4>
+<p text-sm>
+Peça para a IA simplificar ifs aninhados, otimizar laços ou aplicar design patterns.
+</p>
+</div>
+
+<div>
+<div i-carbon-search text-3xl text-yellow-500 />
+<h4>3. Explicação e Debugging</h4>
+<p text-sm>
+Cole um erro ou um trecho de código complexo e peça uma explicação em linguagem simples.
+</p>
+</div>
+
+<div>
+<div i-carbon-test-tool text-3xl text-orange-500 />
+<h4>4. Geração de Testes</h4>
+<p text-sm>
+Gere testes unitários, de integração e mocks para garantir a qualidade do seu código.
+</p>
+</div>
+
+</div>
+
+---
+layout: two-cols
 ---
 
-# Code
+### Pensamento Antigo
 
-Use code snippets and get the highlighting directly, and even types hover!
+"Preciso criar uma API REST em Node. Ok, `npm init`, `install express`, criar pastas, `app.get`..."
 
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
+```typescript
+// Horas depois...
+import express from "express";
 
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
+const app = express();
+app.use(express.json());
 
-doubled.value = 2
+// ...código manual para cada rota...
+app.post("/produtos", (req, res) => {
+  // ...lógica de criação...
+});
+
+app.listen(3000);
 ```
 
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
+::right::
 
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
+### Pensamento Novo
 
-<!-- Footer -->
+(Prompt para a IA)
 
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+```md
+Crie um servidor Express básico com endpoints CRUD
+para um recurso 'produto' (com nome e preco),
+usando TypeScript e rotas separadas.
 ```
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
+<br>
+
+O dev faz o quê? **Valida as rotas, conecta ao banco de dados real e adiciona a lógica de negócio.**
+
+---
+
+## layout: two-cols
+
+::left::
+
+### Pensamento Antigo
+
+"Este 'if' aninhado está horrível. Como posso simplificar isso? Talvez um _strategy pattern_?"
+
+```javascript
+function calcularDesconto(usuario) {
+  let desconto = 0;
+  if (usuario.tipo === "premium") {
+    if (usuario.compras > 10) {
+      desconto = 0.2;
+    } else {
+      desconto = 0.1;
+    }
+  } else {
+    if (usuario.compras > 5) {
+      desconto = 0.05;
     }
   }
+  return desconto;
 }
 ```
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
+::right::
+
+### Pensamento Novo
+
+(Seleciona o bloco e pergunta à IA)
+
+`"Refatore este código para ser mais legível e eficiente. Use 'early returns' e remova a complexidade ciclomática."`
+
+```javascript
+function calcularDesconto(usuario) {
+  if (usuario.tipo !== "premium") {
+    return usuario.compras > 5 ? 0.05 : 0;
+  }
+
+  return usuario.compras > 10 ? 0.2 : 0.1;
 }
 ```
 
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+O dev faz o quê? **Analisa a sugestão e garante que os testes ainda passam.**
 
 ---
 
-# Components
+## class: px-20
 
-<div grid="~ cols-2 gap-4">
+# Desafios: A IA não é mágica
+
+A confiança cega é o maior erro do "novo pensamento".
+
+- 🤹 **Alucinações**: A IA _inventa_ fatos, APIs que não existem ou lógicas sutilmente erradas.
+- 💀 **Viés e Segurança**: A IA aprende com código bom, mas também com código ruim, inseguro e antigo.
+- 📝 **Falta de Contexto**: O código gerado pode ser bom em teoria, mas ruim na prática do seu projeto.
+- 📉 **Risco da "Atrofia"**: Se a IA faz tudo, vamos "desaprender" a programar?
+
+<br>
+
+> Assim como a calculadora não nos fez parar de entender matemática, a IA não nos fará parar de entender lógica. Ela nos permite focar em problemas mais complexos.
+
+---
+
+## layout: quote
+
+## A Regra de Ouro
+
+A IA é sua **estagiária**.
+
+Uma estagiária brilhante, incrivelmente rápida, mas sem experiência de mundo ou contexto do seu projeto.
+
+**Você é o Sênior. Você é o responsável final pelo `commit`.**
+
+---
+
+## class: px-20
+
+# O Futuro: O Agente de IA
+
+Estamos evoluindo do "Copiloto" para o "Agente Autônomo".
+
+<br>
+
+**O Novo Prompt:**
+
+<div class="text-left p-4 border rounded-lg bg-gray-500/10">
+
+_Hoje:_ `"Escreva uma função para..."`
+
+<br>
+
+_Amanhã:_ `"Monitore o app. Se a latência da API 'X' subir acima de 200ms por 5 minutos, analise os logs, identifique o gargalo, escreva um patch, teste-o em staging e, se passar, abra um Pull Request para minha revisão."`
+
+</div>
+
+<br>
+
+O desenvolvedor se torna um Gerente de Produto Técnico, um Arquiteto de Sistemas e um **validador de alto nível**.
+
+---
+
+## class: px-20
+
+# Conclusão
+
+A IA não está tirando seu emprego; ela está **mudando a descrição do seu trabalho**.
+
+<br>
+
+### Chamado à Ação (Call to Action)
+
+<div grid="~ cols-3 gap-4" m="t-4">
+
 <div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
+<div i-carbon-tool-box text-4xl />
+<h4>1. Adote as Ferramentas</h4>
+<p text-sm>
+Use Copilot, ChatGPT, etc., <b>diariamente</b> para acelerar seu fluxo de trabalho.
+</p>
 </div>
+
 <div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
+<div i-carbon-critical text-4xl />
+<h4>2. Seja Cético</h4>
+<p text-sm>
+Revise, entenda e valide <b>todo</b> o código gerado. A responsabilidade é sua.
+</p>
 </div>
 
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
+<div>
+<div i-carbon-architect text-4xl />
+<h4>3. Pense como Arquiteto</h4>
+<p text-sm>
+Foque mais em <b>"o quê"</b> e <b>"por quê"</b>, e menos em "como digitar".
+</p>
 </div>
--->
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
 
 </div>
 
 ---
 
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
+layout: quote
+class: text-center
 
 ---
 
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
+> "O futuro da programação não é sobre saber a sintaxe perfeita; é sobre fazer as perguntas perfeitas."
 
 ---
 
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 639,36,205,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="372,458,261,_">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
-
----
 layout: center
 class: text-center
+
 ---
 
-# Learn More
+# Perguntas?
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+**Obrigado!**
+
+<br>
+<br>
+
+Meriéli Manzano
+
+<div class="mt-4">
+  <a href="https://github.com/Merieli" target="_blank" class="slidev-icon-btn">
+    <carbon:logo-github />
+    /Merieli
+  </a>
+</div>
 
 <PoweredBySlidev mt-10 />
